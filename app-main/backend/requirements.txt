@@ -84,7 +84,7 @@ pluggy==1.6.0
 propcache==0.4.1
 proto-plus==1.27.0
 protobuf==5.29.5
-pyasn1==0.6.1
+pyasn1==0.6.2
 pyasn1_modules==0.4.2
 pycodestyle==2.14.0
 pycparser==2.23
@@ -93,7 +93,7 @@ pydantic_core==2.41.5
 pyflakes==3.4.0
 Pygments==2.19.2
 PyJWT==2.10.1
-pymongo==4.5.0
+pymongo==4.6.3
 pyparsing==3.3.1
 pytest==9.0.2
 python-dateutil==2.9.0.post0
