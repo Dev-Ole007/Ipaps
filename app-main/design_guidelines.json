@@ -1,0 +1,148 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Ipaporanga Hub",
+      "tone": "Organic & Earthy meets Soft Utility",
+      "core_values": ["Pride", "Connection", "Utility", "Modernity"],
+      "archetype": "The Organic Connector"
+    },
+    "typography": {
+      "font_family": {
+        "heading": "Manrope, sans-serif",
+        "body": "Inter, sans-serif"
+      },
+      "weights": {
+        "heading": "700",
+        "subheading": "600",
+        "body": "400"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl tracking-tight font-bold",
+        "h2": "text-3xl md:text-4xl tracking-tight font-bold",
+        "h3": "text-2xl md:text-3xl font-semibold",
+        "body_lg": "text-lg leading-relaxed",
+        "body_base": "text-base leading-relaxed",
+        "caption": "text-sm text-muted-foreground"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap');"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "name": "Emerald 600",
+          "hex": "#059669",
+          "tailwind": "bg-emerald-600",
+          "hsl_approx": "159 65% 30%"
+        },
+        "secondary": {
+          "name": "Slate 900",
+          "hex": "#0f172a",
+          "tailwind": "bg-slate-900",
+          "hsl_approx": "222 47% 11%"
+        },
+        "background": {
+          "light": "#F8FAF9",
+          "dark": "#020617",
+          "paper": "#FFFFFF"
+        },
+        "accent": {
+          "name": "Sertão Ochre",
+          "hex": "#D97706",
+          "usage": "Notifications, Highlights"
+        }
+      },
+      "usage_rules": {
+        "primary_action": "bg-emerald-600 text-white hover:bg-emerald-700",
+        "secondary_action": "bg-slate-900 text-white hover:bg-slate-800",
+        "surface": "bg-white dark:bg-slate-950",
+        "subtle_surface": "bg-slate-50 dark:bg-slate-900"
+      }
+    },
+    "layout": {
+      "spacing": {
+        "container_padding": "p-6 md:p-8",
+        "section_gap": "gap-8 md:gap-12",
+        "item_gap": "gap-4"
+      },
+      "radius": {
+        "default": "rounded-[2rem]",
+        "button": "rounded-full",
+        "card": "rounded-[2rem]",
+        "input": "rounded-xl"
+      },
+      "grids": {
+        "bento_main": "grid grid-cols-1 md:grid-cols-3 gap-4",
+        "list_view": "flex flex-col gap-4"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "h-12 px-8 rounded-full bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all active:scale-95",
+        "secondary": "h-12 px-8 rounded-full bg-white text-slate-900 border border-slate-200 font-medium hover:bg-slate-50 transition-all"
+      },
+      "cards": {
+        "base": "bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow",
+        "interactive": "cursor-pointer hover:border-emerald-200 hover:shadow-lg transition-all duration-300 group"
+      },
+      "inputs": {
+        "base": "h-12 rounded-xl border-slate-200 bg-slate-50 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+      },
+      "navigation": {
+        "bottom_bar": "fixed bottom-6 left-4 right-4 h-16 bg-white/90 backdrop-blur-lg border border-white/20 shadow-2xl rounded-full flex items-center justify-around z-50"
+      }
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+        "glow": "shadow-[0_0_20px_rgba(5,150,105,0.3)]"
+      },
+      "glassmorphism": {
+        "heavy": "bg-white/80 backdrop-blur-xl border border-white/40",
+        "light": "bg-white/40 backdrop-blur-md border border-white/20"
+      },
+      "gradients": {
+        "hero": "bg-gradient-to-b from-emerald-50 to-transparent",
+        "text": "bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500"
+      }
+    },
+    "assets": {
+      "icons": {
+        "library": "lucide-react",
+        "style": "stroke-width={1.5} className='w-6 h-6'"
+      },
+      "images": {
+        "hero_city": "https://images.unsplash.com/photo-1758300468850-acaecff32c68?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "marketplace_cover": "https://images.unsplash.com/photo-1768145488790-185e20abfd08?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "transport_cover": "https://images.unsplash.com/photo-1759389308928-550657788a3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "placeholder_service": "https://images.unsplash.com/photo-1763300923263-d99f6e9790a7?crop=entropy&cs=srgb&fm=jpg&q=85"
+      }
+    }
+  },
+  "instructions_to_main_agent": {
+    "setup": [
+      "UPDATE tailwind.config.js: Set theme.extend.borderRadius.lg to '2rem', md to '1.5rem', sm to '1rem'.",
+      "UPDATE tailwind.config.js: Add colors: emerald (primary), slate (secondary), ice-grey (#F8FAF9).",
+      "UPDATE index.css: Import Manrope and Inter fonts.",
+      "UPDATE index.css: Set body font-family to 'Inter', headings to 'Manrope'.",
+      "INSTALL: lucide-react, framer-motion, clsx, tailwind-merge (if not present)."
+    ],
+    "rules": [
+      "ALWAYS use rounded-[2rem] for main containers and cards.",
+      "NEVER use sharp corners (rounded-none) unless absolutely necessary for a specific grid layout.",
+      "USE 'Ice Grey' (#F8FAF9) as the main background color for the app to give it depth.",
+      "USE White (#FFFFFF) for cards to create lift.",
+      "IMPLEMENT a 'Mobile-First' layout. The desktop view should be a centered mobile-app container or a responsive dashboard.",
+      "USE the 'Bottom Navigation' pattern for the main layout.",
+      "ENSURE all interactive elements have a 'data-testid' attribute."
+    ],
+    "universal_guidelines": [
+      "Do not use generic centered layouts.",
+      "Create depth through layered design elements.",
+      "Use glass-morphism effects with backdrop filters.",
+      "Every interaction needs micro-animations.",
+      "Use 2-3x more spacing than feels comfortable."
+    ]
+  }
+}

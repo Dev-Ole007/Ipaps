@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run backend server.py",
+			"type": "shell",
+			"command": "python backend/server.py"
+		},
+		{
+			"label": "Run backend server.py",
+			"type": "shell",
+			"command": "python app-main/backend/server.py"
+		}
+	]
+}
